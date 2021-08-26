@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Team|
+        <%= title %>
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+        body {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-family: 'Noto Serif', serif;
+            max-width: 1200px;
+        }
+        
+        p,
+        h1,
+        h2,
+        h3,
+        a,
+        ul {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: #222;
+        }
+        /* nav & footer styles */
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            text-transform: uppercase;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        
+        nav li {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+        
+        nav h1 {
+            font-size: 3em;
+        }
+        
+        nav p,
+        nav a {
+            color: #777;
+            font-weight: 300;
+        }
+        
+        footer {
+            color: #777;
+            text-align: center;
+            margin: 80px auto 20px;
+        }
+        
+        h2 {
+            margin-bottom: 40px;
+        }
+        
+        h3 {
+            text-transform: capitalize;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            margin-left: 20px;
+        }
+        /* index styles */
+        /* details styles */
+        /* create styles */
+        
+        .login details {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .login details input,
+        .login details textarea {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        
+        .login details label {
+            display: block;
+            margin-top: 24px;
+        }
+        
+        textarea {
+            height: 120px;
+        }
+        
+        .login button {
+            margin-top: 20px;
+            background: crimson;
+            color: white;
+            padding: 6px;
+            border: 0;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .closebtn:hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<nav>
+    <div class="site-title">
+        <a href="/">
+            <h1>Delta Task 3</h1>
+        </a>
+        <p>A User interaction site</p>
+    </div>
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/my/team">MY Teams</a></li>
+        <li><a href="/create/team">Create Team</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+
+</nav>
+
+<body>
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Team Creation Failed</strong> We were not able to create a team due to some technical glitch. We will have a look. Please try again in a while.
+        </br>
+        Click on the "x" symbol to close the alert message.
+    </div>
+
+    <div>
+        <p>Create your own teams and Enjoy!! </p>
+        </br>
+        </br>
+        <form id="team details" method="POST" action="/create/team">
+            <label for="Teamname" placeholder="Enter team name" required>Enter Team Name:</label>
+            <input type="text" name="teamname" required>
+
+            </br>
+            </br>
+
+
+            <label for="Searchbar" placeholder="Enter Admin username" required>Enter Admin Username:</label>
+            <input type="array" name="admin" required>
+            <button type="submit" class="button" id="b6">Submit</button>
+        </form>
+        <hr>
+        </br>
+
+    </div>
+</body>
+<footer>
+    Copyright &copy; Hensiha_delta_task 2020
+</footer>
+
+</html>
